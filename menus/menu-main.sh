@@ -1,39 +1,45 @@
 #!/bin/bash
-# Script Name: AtoMiC Main Menu
+# Script Name: Nubuntu Toolkit Main Menu
 
-MAINCHOICE=$(whiptail --title "AtoMiC ToolKit - htpcBeginner.com" \
+MAINCHOICE=$(whiptail --title "Nubuntu ToolKit - azloco.com" \
 --menu "Which app would you like to manage?" --backtitle "$BACKTITLE" \
 --fb --cancel-button "Exit" $LINES $COLUMNS "$NETLINES" \
-"PVRs" "Automatic Media Library Manager" \
-"Usenet Downloaders" "Download binary files from Usenet servers" \
-"Bittorrent Clients" "Download Torrents" \
-"Personal Media Servers" "Organise and serve Media" \
-"Home Theater" "Media Playback" \
-"Sync Tools" "Keep files and folders synchronized" \
-"Administration Tools" "system configuration tools e.g. Webmin" \
-"Utilities" "Other miscellaneous tools" \
+"Platform Specifics" "Automatic Media Library Manager" \
+"Graphics Cards" "Download binary files from Usenet servers" \
+"General Utilities" "Download Torrents" \
+"Media Applications" "Organise and serve Media" \
+"Office Applications" "Media Playback" \
+"Backup Tools" "Keep files and folders synchronized" \
+"Development Tools" "system configuration tools e.g. Webmin" \
+"Virtualization Tools" "Other miscellaneous tools" \
+"Virtualization Tools" "Other miscellaneous tools" \
+"Git Setup/Tools" "Other miscellaneous tools" \
 "Maintenance" "Perform maintenance tasks" 3>&1 1>&2 2>&3)
 
 exitstatus=$?
 if [[ $exitstatus = 0 ]]; then
     source "$SCRIPTPATH/inc/app-constant-reset.sh"
     case "$MAINCHOICE" in
-        "PVRs" )
+        "Platform Specifics" )
             source "$SCRIPTPATH/menus/menu-pvrs.sh" ;;
-        "Usenet Downloaders" )
+        "Graphics Cards" )
             source "$SCRIPTPATH/menus/menu-usenet.sh" ;;
-        "Bittorrent Clients" )
+        "General Utilities" )
             source "$SCRIPTPATH/menus/menu-bittorrent.sh" ;;
-        "Personal Media Servers" )
+        "Media Applications" )
             source "$SCRIPTPATH/menus/menu-personal-media-servers.sh" ;;
-        "Home Theater" )
+        "Office Applications" )
             source "$SCRIPTPATH/menus/menu-home-theater.sh" ;;
-        "Sync Tools" )
+        "Backup Tools" )
             source "$SCRIPTPATH/menus/menu-sync-tools.sh" ;;
-        "Administration Tools" )
+        "Development Tools" )
             source "$SCRIPTPATH/menus/menu-administration-tools.sh" ;;
-        "Utilities" )
+        "Virtualization Tools" )
             source "$SCRIPTPATH/utils/utils-menu.sh" ;;
+        "Networking Tools" )
+            source "$SCRIPTPATH/utils/utils-menu.sh" ;; 
+        "Git Setup/Tools" )
+            source "$SCRIPTPATH/utils/utils-menu.sh" ;;       
         "Maintenance" )
             source "$SCRIPTPATH/maintenance/maintenance-menu.sh" ;;
         *)
