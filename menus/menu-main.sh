@@ -21,27 +21,27 @@ if [[ $exitstatus = 0 ]]; then
     source "$SCRIPTPATH/inc/app-constant-reset.sh"
     case "$MAINCHOICE" in
         "Platform Specifics" )
-            source "$SCRIPTPATH/menus/menu-pvrs.sh" ;;
+            source "$SCRIPTPATH/menus/menu-platform.sh" ;;
         "Graphics Cards" )
-            source "$SCRIPTPATH/menus/menu-usenet.sh" ;;
+            source "$SCRIPTPATH/menus/menu-gpu.sh" ;;
         "General Utilities" )
-            source "$SCRIPTPATH/menus/menu-bittorrent.sh" ;;
+            source "$SCRIPTPATH/menus/menu-utilities.sh" ;;
         "Media Applications" )
-            source "$SCRIPTPATH/menus/menu-personal-media-servers.sh" ;;
+            source "$SCRIPTPATH/menus/menu-media.sh" ;;
         "Office Applications" )
-            source "$SCRIPTPATH/menus/menu-home-theater.sh" ;;
+            source "$SCRIPTPATH/menus/menu-office.sh" ;;
         "Backup Tools" )
-            source "$SCRIPTPATH/menus/menu-sync-tools.sh" ;;
+            source "$SCRIPTPATH/menus/menu-backup-tools.sh" ;;
         "Development Tools" )
-            source "$SCRIPTPATH/menus/menu-administration-tools.sh" ;;
+            source "$SCRIPTPATH/menus/menu-dev-tools.sh" ;;
         "Virtualization Tools" )
-            source "$SCRIPTPATH/utils/utils-menu.sh" ;;
+            source "$SCRIPTPATH/menu/menu-virt-tools.sh" ;;
         "Networking Tools" )
-            source "$SCRIPTPATH/utils/utils-menu.sh" ;; 
+            source "$SCRIPTPATH/utils/menu-virt-tools.sh" ;; 
         "Git Setup/Tools" )
-            source "$SCRIPTPATH/utils/utils-menu.sh" ;;       
+            source "$SCRIPTPATH/utils/menu-git-tools.sh" ;;       
         "Maintenance" )
-            source "$SCRIPTPATH/maintenance/maintenance-menu.sh" ;;
+            source "$SCRIPTPATH/maintenance/menu-maintenance.sh" ;;
         *)
             echo -e "${RED}Invalid Option$ENDCOLOR"
             source "$SCRIPTPATH/inc/exit.sh" ;;

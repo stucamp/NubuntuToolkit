@@ -1,7 +1,7 @@
 #!/bin/bash
-# Script Name: AtoMiC Usenet Menu
+# Script Name: Nubuntu Usenet Menu
 
-SUBCHOICE=$(whiptail --title "AtoMiC ToolKit - htpcBeginner.com" \
+SUBCHOICE=$(whiptail --title "Nubuntu ToolKit - azloco.com" \
 --menu "Which app would you like to manage?" --backtitle "$BACKTITLE" \
 --fb --cancel-button "Exit" $LINES $COLUMNS "$NETLINES" \
 "NZBGet" "NZB Newsgrabber / Downloader" \
