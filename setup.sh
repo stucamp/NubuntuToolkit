@@ -33,7 +33,7 @@ help(){
     echo -e "${YELLOW}--->COMMAND LINE OPTIONS:$ENDCOLOR"
     echo
     echo "Usage example:";
-    echo "ubuntu-toolkit [(-i|--install) appname] [(-u|--uninstall) appname] [(-b|--backup) appname] [(-r|--restore) appname] [(-m|--manualupdate) appname] [(-p|--passwordreset) appname] [(-a|--accessdetails) appname] [(-x|--reverseproxy)] [(-t|--updatetoolkit)] [(-U|--updateall)]";
+    echo "nubuntu-toolkit [(-i|--install) appname] [(-u|--uninstall) appname] [(-b|--backup) appname] [(-r|--restore) appname] [(-m|--manualupdate) appname] [(-p|--passwordreset) appname] [(-a|--accessdetails) appname] [(-x|--reverseproxy)] [(-t|--updatetoolkit)] [(-U|--updateall)]";
     echo "Options:";
     echo
     echo "-i or --install appname: Install an app.";
@@ -44,7 +44,7 @@ help(){
     echo "-p or --passwordreset appname: Reset the password to an app.";
     echo "-a or --accessdetails appname: View the access details for an app.";
     echo "-x or --reverseproxy appname: Enable Reverse Proxy for an app.";
-    echo "-t or --updatetoolkit: Update Ubuntu-ToolKit.";
+    echo "-t or --updatetoolkit: Update Nubuntu-ToolKit.";
     echo "-U or --updateall: Update Linux and all apps.";
     exit 1;
 }
@@ -54,7 +54,7 @@ updatetoolkit=0;
 updateall=0;
 
 # Capture options to getopts
-ARGS=$(getopt -o "i:u:b:r:m:p:a:x:tUh" -l "install:,uninstall:,backup:,restore:,manualupdate:,passwordreset:,accessdetails:,reverseproxy:,updatetoolkit,updateall,help" -n "Ubuntu-ToolKit" -- "$@");
+ARGS=$(getopt -o "i:u:b:r:m:p:a:x:tUh" -l "install:,uninstall:,backup:,restore:,manualupdate:,passwordreset:,accessdetails:,reverseproxy:,updatetoolkit,updateall,help" -n "nubuntu-ToolKit" -- "$@");
 export ARGS
 
 #sleep 1
