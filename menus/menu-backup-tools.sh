@@ -1,25 +1,27 @@
 #!/bin/bash
-# Script Name: Nubuntu Usenet Menu
+# Script Name: Nubuntu Backup Menu
 
 SUBCHOICE=$(whiptail --title "Nubuntu ToolKit - azloco.com" \
 --menu "Which app would you like to manage?" --backtitle "$BACKTITLE" \
 --fb --cancel-button "Exit" $LINES $COLUMNS "$NETLINES" \
-"Rclone" "Command line program to sync files and directories" \
-"Rclone Browser" "Simple GUI for rclone command line tool" \
-"Resilio-Sync" "Fast and reliable file and folder synchronization" \
-"Syncthing" "Open Source Continuous File Synchronization" \
+"Duplicati" "Command line program to sync files and directories" \
+"Duplicity" "Simple GUI for rclone command line tool" \
+"Bacula" "Fast and reliable file and folder synchronization" \
+"rsync" "Open Source Continuous File Synchronization" \
 "Go Back" "Back to Main Menu" 3>&1 1>&2 2>&3)
 
 exitstatus=$?
 if [[ $exitstatus = 0 ]]; then
     source "$SCRIPTPATH/inc/app-constant-reset.sh"
     case "$SUBCHOICE" in
-        "Rclone" )
-            source "$SCRIPTPATH/rclone/rclone-menu.sh" ;;
-        "Rclone Browser" )
-            source "$SCRIPTPATH/rclone-browser/rclone-browser-menu.sh" ;;
-        "Resilio-Sync" )
-            source "$SCRIPTPATH/resilio-sync/resilio-sync-menu.sh" ;;
+        "Duplicati" )
+            source "$SCRIPTPATH/duplicati/duplicati-menu.sh" ;;
+        "Duplicity" )
+            source "$SCRIPTPATH/duplicity/duplicity-menu.sh" ;;
+        "Bacula" )
+            source "$SCRIPTPATH/bacula/bacula-menu.sh" ;;
+        "rsync" )
+            source "$SCRIPTPATH/rsync/rsync-menu.sh" ;;
         "Syncthing" )
             source "$SCRIPTPATH/syncthing/syncthing-menu.sh" ;;
         "Go Back" )

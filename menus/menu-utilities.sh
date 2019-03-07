@@ -4,15 +4,30 @@
 SUBCHOICE=$(whiptail --title "Nubuntu ToolKit - azloco.com" \
 --menu "Which app would you like to manage?" --backtitle "$BACKTITLE" \
 --fb --cancel-button "Exit" $LINES $COLUMNS "$NETLINES" \
-"Kodi" "Media player developed by the XBMC Foundation" \
+"htop" "Media player developed by the XBMC Foundation" \
+"powertop" "Media player developed by the XBMC Foundation" \
+"Deluge" "Media player developed by the XBMC Foundation" \
+"Filezilla" "Media player developed by the XBMC Foundation" \
+"Unzip" "Media player developed by the XBMC Foundation" \
+"Disks" "Media player developed by the XBMC Foundation" \
 "Go Back" "Back to Main Menu" 3>&1 1>&2 2>&3)
 
 exitstatus=$?
 if [[ $exitstatus = 0 ]]; then
     source "$SCRIPTPATH/inc/app-constant-reset.sh"
     case "$SUBCHOICE" in
-        "Kodi" )
-            source "$SCRIPTPATH/kodi/kodi-menu.sh" ;;
+        "htop" )
+            source "$SCRIPTPATH/htop/htop-menu.sh" ;;
+        "powertop" )
+            source "$SCRIPTPATH/powertop/powertop-menu.sh" ;;
+        "Deluge" )
+            source "$SCRIPTPATH/deluge/deluge-menu.sh" ;;
+        "Filezilla" )
+            source "$SCRIPTPATH/filezilla/filezilla-menu.sh" ;;
+        "Unzip" )
+            source "$SCRIPTPATH/unzip/unzip-menu.sh" ;;
+        "Disks" )
+            source "$SCRIPTPATH/disks/disks-menu.sh" ;;
         "Go Back" )
             source "$SCRIPTPATH/menus/menu-main.sh" ;;
         *)

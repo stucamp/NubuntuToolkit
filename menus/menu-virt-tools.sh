@@ -4,30 +4,27 @@
 SUBCHOICE=$(whiptail --title "Nubuntu ToolKit - azloco.com" \
 --menu "Which app would you like to manage?" --backtitle "$BACKTITLE" \
 --fb --cancel-button "Exit" $LINES $COLUMNS "$NETLINES" \
-"Emby" "Organize, play, and stream audio and video" \
-"Plex" "organizes all of your video, music and photo collections" \
-"Tautulli" "Monitoring and tracking tool for Plex Media Server" \
-"Subsonic" "web-based media streamer and jukebox" \
-"Madsonic" "web-based media streamer and jukebox fork of Subsonic" \
-"Ubooquity" "Home server for your comics and ebooks" \
+"QEMU/KVM" "Organize, play, and stream audio and video" \
+"Virt-Manager" "organizes all of your video, music and photo collections" \
+"Virtualbox" "Monitoring and tracking tool for Plex Media Server" \
+"Docker" "web-based media streamer and jukebox" \
+"Kitematic" "web-based media streamer and jukebox fork of Subsonic" \
 "Go Back" "Back to Main Menu" 3>&1 1>&2 2>&3)
 
 exitstatus=$?
 if [[ $exitstatus = 0 ]]; then
     source "$SCRIPTPATH/inc/app-constant-reset.sh"
     case "$SUBCHOICE" in
-        "Emby" )
+        "QEMU/KVM" )
             source "$SCRIPTPATH/emby-server/emby-server-menu.sh" ;;
-        "Plex" )
+        "Virt-Manager" )
             source "$SCRIPTPATH/plexmediaserver/plexmediaserver-menu.sh" ;;
-        "Tautulli" )
+        "Virtualbox" )
             source "$SCRIPTPATH/tautulli/tautulli-menu.sh" ;;
-        "Subsonic" )
+        "Docker" )
             source "$SCRIPTPATH/subsonic/subsonic-menu.sh" ;;
-        "Madsonic" )
+        "Kitematic" )
             source "$SCRIPTPATH/madsonic/madsonic-menu.sh" ;;
-        "Ubooquity" )
-            source "$SCRIPTPATH/ubooquity/ubooquity-menu.sh" ;;
         "Go Back" )
             source "$SCRIPTPATH/menus/menu-main.sh" ;;
         *)

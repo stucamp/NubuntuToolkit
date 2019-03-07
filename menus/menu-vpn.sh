@@ -4,20 +4,20 @@
 SUBCHOICE=$(whiptail --title "Nubuntu ToolKit - azloco.com" \
 --menu "Which app would you like to manage?" --backtitle "$BACKTITLE" \
 --fb --cancel-button "Exit" $LINES $COLUMNS "$NETLINES" \
-"NZBGet" "NZB Newsgrabber / Downloader" \
-"NZBHydra" "Meta search for NZB indexers" \
-"SABnzbd+" "NZB Newsgrabber / Downloader" \
+"Private Internet Access" "GUI for PIA VPN" \
+"Nord VPN" "Terminal VPN for NordVPN users" \
+"OpenVPN" "Setup of person VPN" \
 "Go Back" "Back to Main Menu" 3>&1 1>&2 2>&3)
 
 exitstatus=$?
 if [[ $exitstatus = 0 ]]; then
     source "$SCRIPTPATH/inc/app-constant-reset.sh"
     case "$SUBCHOICE" in
-        "NZBGet" )
+        "Private Internet Access GUI" )
             source "$SCRIPTPATH/nzbget/nzbget-menu.sh" ;;
-        "NZBHydra" )
+        "Nord VPN" )
             source "$SCRIPTPATH/nzbhydra/nzbhydra-menu.sh" ;;
-        "SABnzbd+" )
+        "OpenVPN" )
             source "$SCRIPTPATH/sabnzbdplus/sabnzbdplus-menu.sh" ;;
         "Go Back" )
             source "$SCRIPTPATH/menus/menu-main.sh" ;;

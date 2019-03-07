@@ -14,6 +14,7 @@ MAINCHOICE=$(whiptail --title "Nubuntu ToolKit - azloco.com" \
 "Virtualization Tools" "Other miscellaneous tools" \
 "Virtualization Tools" "Other miscellaneous tools" \
 "Git Setup/Tools" "Other miscellaneous tools" \
+"Monitoring Tools" "Other miscellaneous tools" \
 "Maintenance" "Perform maintenance tasks" 3>&1 1>&2 2>&3)
 
 exitstatus=$?
@@ -39,7 +40,9 @@ if [[ $exitstatus = 0 ]]; then
         "Networking Tools" )
             source "$SCRIPTPATH/utils/menu-virt-tools.sh" ;; 
         "Git Setup/Tools" )
-            source "$SCRIPTPATH/utils/menu-git-tools.sh" ;;       
+            source "$SCRIPTPATH/utils/menu-git-tools.sh" ;;   
+        "Monitoring Tools" )
+            source "$SCRIPTPATH/utils/menu-monitor.sh" ;;      
         "Maintenance" )
             source "$SCRIPTPATH/maintenance/menu-maintenance.sh" ;;
         *)
