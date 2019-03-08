@@ -20,17 +20,17 @@ if [[ $exitstatus = 0 ]]; then
         "JetBrains Toolbox" )
             source "$SCRIPTPATH/jetbrains/jetbrains-menu.sh" ;;
         "Netbeans" )
-            source "$SCRIPTPATH/netbeans/netbeans-menu.sh" ;;
+            source "$SCRIPTPATH/inc/invalid-option.sh" ;;
         "Eclipse" )
-            source "$SCRIPTPATH/eclipse/eclipse-menu.sh" ;;
+            source "$SCRIPTPATH/inc/invalid-option.sh" ;;
         "Sublime Test 3" )
-            source "$SCRIPTPATH/sublime/sublime-menu.sh" ;;
+            source "$SCRIPTPATH/inc/invalid-option.sh" ;;
         "Atom" )
-            source "$SCRIPTPATH/atom/atom-menu.sh" ;;
+            source "$SCRIPTPATH/inc/invalid-option.sh" ;;
         "VS Code" )
-            source "$SCRIPTPATH/vscode/vscode-menu.sh" ;;
+            source "$SCRIPTPATH/inc/invalid-option.sh" ;;
         "Meld" )
-            source "$SCRIPTPATH/meld/meld-menu.sh" ;;
+            source "$SCRIPTPATH/inc/invalid-option.sh" ;;
         "Go Back" )
             source "$SCRIPTPATH/menus/menu-main.sh" ;;
         *)
