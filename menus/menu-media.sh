@@ -9,6 +9,7 @@ SUBCHOICE=$(whiptail --title "Nubuntu ToolKit - azloco.com" \
 "Subsonic" "web-based media streamer and jukebox" \
 "Madsonic" "web-based media streamer and jukebox fork of Subsonic" \
 "Ubooquity" "Home server for your comics and ebooks" \
+"Kodi" "Cross-platform video and audio player" \
 "VLC" "Cross-platform video and audio player" \
 "GIMP" "Open source Photoshop alternative" \
 "Pinta" "Open source MS Paint alternative" \
@@ -30,16 +31,18 @@ if [[ $exitstatus = 0 ]]; then
             source "$SCRIPTPATH/madsonic/madsonic-menu.sh" ;;
         "Ubooquity" )
             source "$SCRIPTPATH/ubooquity/ubooquity-menu.sh" ;;
+        "Kodi" )
+            source "$SCRIPTPATH/kodi/kodi-menu.sh" ;;
         "VLC" )
-            source "$SCRIPTPATH/vlc/vlc-menu.sh" ;;
+            source "$SCRIPTPATH/inc/invalid-option.sh" ;;
         "GIMP" )
-            source "$SCRIPTPATH/gimp/gimp-menu.sh" ;;
+            source "$SCRIPTPATH/inc/invalid-option.sh" ;;
         "Pinta" )
-            source "$SCRIPTPATH/pinta/pinta-menu.sh" ;;
+            source "$SCRIPTPATH/inc/invalid-option.sh" ;;
         "Inkscape" )
-            source "$SCRIPTPATH/inkscape/inkscape-menu.sh" ;;
+            source "$SCRIPTPATH/inc/invalid-option.sh" ;;
         "Audacity" )
-            source "$SCRIPTPATH/audacity/audacity-menu.sh" ;;
+            source "$SCRIPTPATH/inc/invalid-option.sh" ;;
         "Go Back" )
             source "$SCRIPTPATH/menus/menu-main.sh" ;;
         *)

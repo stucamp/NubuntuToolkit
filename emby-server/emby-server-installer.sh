@@ -1,0 +1,21 @@
+#!/bin/bash
+# Script Name: AtoMiC Emby Installer
+
+source "$SCRIPTPATH/inc/commons.sh"
+source "$SCRIPTPATH/inc/header.sh"
+echo -e "${GREEN}AtoMiC $APPTITLE Installer Script$ENDCOLOR"
+source "$SCRIPTPATH/inc/pause.sh"
+source "$SCRIPTPATH/$APPNAME/$APPNAME-repository-configurator.sh"
+source "$SCRIPTPATH/inc/app-repository-add.sh"
+source "$SCRIPTPATH/utils/mono/mono-installer.sh"
+source "$SCRIPTPATH/utils/ffmpeg/ffmpeg-installer.sh"
+source "$SCRIPTPATH/emby-server/emby-server-constants.sh"
+source "$SCRIPTPATH/inc/app-install.sh"
+source "$SCRIPTPATH/inc/app-stop.sh"
+source "$SCRIPTPATH/inc/app-set-permissions.sh"
+source "$SCRIPTPATH/$APPNAME/$APPNAME-settings-configurator.sh"
+sudo usermod -a -G emby "$UNAME"
+source "$SCRIPTPATH/inc/app-start.sh"
+source "$SCRIPTPATH/inc/app-install-confirmation.sh"
+source "$SCRIPTPATH/inc/thankyou.sh"
+source "$SCRIPTPATH/inc/exit.sh"

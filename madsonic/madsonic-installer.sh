@@ -1,0 +1,21 @@
+#!/bin/bash
+# Script Name: AtoMiC Madsonic Installer
+
+source "$SCRIPTPATH/inc/commons.sh"
+source "$SCRIPTPATH/inc/header.sh"
+echo -e "${GREEN}AtoMiC $APPTITLE Installer Script$ENDCOLOR"
+source "$SCRIPTPATH/inc/pause.sh"
+source "$SCRIPTPATH/inc/app-autostart-remove.sh"
+source "$SCRIPTPATH/inc/app-uninstall.sh"
+source "$SCRIPTPATH/utils/java/java-installer.sh"
+source "$SCRIPTPATH/madsonic/madsonic-constants.sh"
+source "$SCRIPTPATH/madsonic/madsonic-download-install.sh"
+source "$SCRIPTPATH/inc/app-autostart-configure.sh"
+source "$SCRIPTPATH/madsonic/madsonic-ffmpeg-update.sh"
+source "$SCRIPTPATH/inc/app-start.sh"
+source "$SCRIPTPATH/inc/app-stop.sh"
+source "$SCRIPTPATH/inc/app-set-permissions.sh"
+source "$SCRIPTPATH/inc/app-start.sh"
+source "$SCRIPTPATH/inc/app-install-confirmation.sh"
+source "$SCRIPTPATH/inc/thankyou.sh"
+source "$SCRIPTPATH/inc/exit.sh"

@@ -1,0 +1,13 @@
+[Unit]
+Description=Ubooquity
+After=network.target
+
+[Service]
+User=ReplaceMe
+WorkingDirectory=/opt/ubooquity
+ExecStart=/usr/bin/java -jar Ubooquity.jar -headless -remoteadmin
+Restart=always
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target

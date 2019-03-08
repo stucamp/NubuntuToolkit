@@ -117,7 +117,7 @@ if [[ ! -d '/opt' ]]; then
     echo -e 'opt dir created.'
 fi
 
-#Creating a sym link to the user bin so the toolkit can be accessed by typing atk.
+#Creating a sym link to the user bin so the toolkit can be accessed by typing nub.
 if [[ ! -L "/usr/local/bin/nub" ]]; then
     echo
     echo -e "${YELLOW}--->Installing Nubuntu-ToolKit symbolic link...$ENDCOLOR"
