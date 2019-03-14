@@ -7,7 +7,6 @@ SUBCHOICE=$(whiptail --title "Nubuntu ToolKit - azloco.com" \
 "Private Internet Access" "GUI for PIA VPN" \
 "Nord VPN" "Terminal VPN for NordVPN users" \
 "OpenVPN" "Setup of person VPN" \
-"OpenVPN" "Setup of person VPN" \
 "Go Back" "Back to Main Menu" 3>&1 1>&2 2>&3)
 
 exitstatus=$?
@@ -18,8 +17,6 @@ if [[ $exitstatus = 0 ]]; then
             source "$SCRIPTPATH/nzbget/nzbget-menu.sh" ;;
         "Nord VPN" )
             source "$SCRIPTPATH/nzbhydra/nzbhydra-menu.sh" ;;
-        "OpenVPN" )
-            source "$SCRIPTPATH/sabnzbdplus/sabnzbdplus-menu.sh" ;;
         "OpenVPN" )
             source "$SCRIPTPATH/sabnzbdplus/sabnzbdplus-menu.sh" ;;
         "Go Back" )
